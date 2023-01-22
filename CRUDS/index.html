@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="icon" type="image/x-icon" href="magic.ico">
+    <title>CRUDS</title>
+</head>
+<body>
+
+    <div class="crud">
+
+        <div class="head">
+            <h2>CRUD</h2>
+            <p>نظام إدارة المنتج</p>
+        </div>
+
+        <div class="inputs">
+
+            <input placeholder="المنتج" type="text" id="title">
+            <div class="price">
+
+                <input onkeyup="getTotal()" type="number" id="price" placeholder="السعر">
+                <input onkeyup="getTotal()" type="number" id="taxes" placeholder="الضرائب">
+                <input onkeyup="getTotal()" type="number" id="ads" placeholder="الإعلانات">
+                <input onkeyup="getTotal()" type="number" id="discount" placeholder="تخفيض">
+                <small id="total"></small>
+
+            </div>
+            <input placeholder="عدد" type="number" id="count">
+            <input placeholder="الفئة" type="text" id="category">
+            <button id="submit">إنشاء</button>
+
+
+        </div>
+
+
+
+        <div class="outputs">
+
+            <div class="searchBlock">
+                <input onkeyup="searchData(this.value)" type="text" id="search" placeholder="بحث">
+                <div class="btnSearch">
+                    
+                    <button onclick="getSearchMood(this.id)" id="searchTitle">البحث حسب العنوان</button>
+                    <button onclick="getSearchMood(this.id)" id="searchCategory">البحث حسب الفئة</button>
+                
+                </div>
+            </div>
+            <div id="deleteAll">
+                
+            </div>
+            <table>
+                <tr>
+                    <th>#</th>
+                    <th>المنتج</th>
+                    <th>السعر</th>
+                    <th>ضرائب</th>
+                    <th>إعلانات</th>
+                    <th>تخفيض</th>
+                    <th>المجموع</th>
+                    <th>الفئة</th>
+                    <th>تحديث</th>
+                    <th>فسخ</th>
+                </tr>
+
+                <tbody id="tbody">
+                    
+                </tbody>
+            </table>
+
+        </div>
+
+    </div>
+
+    
+
+
+
+
+
+    <script src="main.js"></script>
+</body>
+</html>
