@@ -1,9 +1,7 @@
 # Arabic-Opensource-Webapps
 
-CRUD
+CRUD, PhoneStore ...
 
-PhoneStore
-
-Powered By:
+## Powered By:
 
 https://smx.tn
